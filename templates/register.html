@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/signin.css">
+</head>
+<body>
+    <form action="/register" method="POST" class="form">
+        <h2>Register</h2>
+        {{ form.csrf_token }}
+        {% if form.csrf_token.errors %}
+            <div class="warning">You have submitted an invalid CSRF token</div>
+        {% endif %}
+        {{ form.username.label }} {{ form.username(size=20) }}
+        {{ form.password.label }} {{ form.password(size=20) }}
+        {{ form.confirm_password.label }} {{ form.confirm_password(size=20) }}
+        {{ form.submit() }}
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color: red;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <p>Already have an account? <a href="{{ url_for('signin') }}">Sign in here</a></p>
+    </form>
+</body>
+</html>

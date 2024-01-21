@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Dashboard</title>
+    <script src="https://cdn.tiny.cloud/1/yho4d078dflvad1hmcimm7m6ih8r4y2j32a3fvzqvpirpz4n/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body>
+    <div id="content-display"></div>
+    <h1>Edit Dashboard</h1>
+    <h3>Select an option to edit:</h3>
+    <select id="content-dropdown"></select>
+    <textarea id="editable-content"></textarea>
+    <button id="save-changes">Save Changes</button>
+
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    <script type = "text/javascript" src="/static/js/main.js"></script>
+
+    
+</body>
+</html>
