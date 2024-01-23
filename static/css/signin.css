@@ -36,12 +36,12 @@ input[type="submit"] {
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #4eb980;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #127d44;
 }

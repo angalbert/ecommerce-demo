@@ -2,10 +2,17 @@
 <html>
 <head>
     <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script src="https://kit.fontawesome.com/1cf42eadaf.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    {{ html_content | safe }}
-    <a href="{{ url_for('signin') }}" class="signin-button">Sign In</a>
+    <div id="header">
+        <span class="logo icon fa-paper-plane"></span>
+        {{ html_content | safe }}      
+        <br />
+        <a href="{{ url_for('signin') }}" class="signin-button">Sign In</a>
+    </div>
 </body>
 </html>
